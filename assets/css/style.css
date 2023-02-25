@@ -211,7 +211,7 @@ nav .bi {
 
 .text-box p {
   margin: 10px 0 40px;
-  font-size: 14px;
+  font-size: 20px;
   color: #fff;
 }
 
@@ -291,7 +291,7 @@ h1 {
 
 p {
   color: #777;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 22px;
   padding: 10px;
@@ -406,49 +406,107 @@ a {
 /* FAQ */
 
 .faq {
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   margin: auto;
-  text-align: center;
   padding: 100px;
 }
 
-.questions {
-  margin-top: 50px;
+.section-center {
+  background-color: red-;
+  max-width: 750px;
 }
-
 .question {
-  display: flex;
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  box-shadow: var(--light-shadow);
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  margin-bottom: 2rem;
 }
-
 .question-title {
-  flex: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  padding-bottom: 1rem;
 }
 .question-title p {
-  font-size: 20px;
-  font-weight: 500;
+  margin-bottom: 0;
+  letter-spacing: var(--spacing);
   color: #0f2137;
+  font-weight: 600;
   line-height: 2;
-  text-align: left;
 }
-.question-text {
-  flex: 3;
-}
-.question-text p {
-  font-size: 16px;
-  color: #343d48;
-  font-weight: 300;
-  text-align: left;
-  line-height: 2;
-  font-family: DM Sans, sans-serif;
-}
-
 .question-btn {
-  flex: 1;
   font-size: 1.5rem;
   background: transparent;
   border-color: transparent;
   cursor: pointer;
-  color: red;
-  transition: 0.5s;
+  color: var(--clr-gold);
+  transition: var(--transition);
+}
+.question-btn:hover {
+  transform: rotate(90deg);
+}
+.question-text {
+  padding: 1rem 0 1.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+}
+.question-text p {
+  font-size: 16px;
+  line-height: 2;
+  font-family: DM Sans, sans-serif;
+  margin-bottom: 0;
+  color: #6d7279;
+}
+/* hide text */
+.question-text {
+  display: none;
+}
+.show-text .question-text {
+  display: block;
+}
+.minus-icon {
+  display: none;
+}
+.show-text .minus-icon {
+  display: inline;
+}
+.show-text .plus-icon {
+  display: none;
+}
+
+/* testimonials-Section  */
+
+.testimonials {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  padding: 100px;
+  text-align: center;
+  background: #ffffff;
+  display: flex;
+}
+
+.testimonial-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 4;
+  flex-basis: 44%;
+  margin-bottom: 5%;
+  text-align: left;
+  padding: 25px;
+  cursor: pointer;
+  line-height: 1.26;
+}
+.testimonial-col h1,p {
+  line-height: 1.5;
+}
+
+.testimonial-col img {
+  width: 100%;
 }
